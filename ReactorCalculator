@@ -31,7 +31,7 @@ reactorCasingCore = 0
 # size of the reactor
 size = int(input("How big do you want the reactor to be? (input '5' for 5x5x5, etc)\n"))
 
-# need main blocks or no
+# need main blocks or not
 mainBlockCheck = input("Do you already have the essential components? Y/N (Controller, power tap, etc)\n")
 if mainBlockCheck.lower() == 'n':
     # controller block
