@@ -68,13 +68,13 @@ else:
     upgradeCheck = True
 
 # size of the reactor
-if upgradeCheck == True:
+if upgradeCheck:
     size = int(input("How big is your current reactor size? (input '5' for 5x5x5, etc)\n"))
 else:
     size = int(input("How big do you want the reactor to be? (input '5' for 5x5x5, etc, select an odd number)\n"))
 
 # need main blocks or no
-if upgradeCheck == False:
+if not upgradeCheck:
     mainBlockCheck = input("Do you already have the essential components? Y/N (Controller, power tap, 2 access port)\n")
     if mainBlockCheck.lower() == 'n':
         # controller block
@@ -136,7 +136,7 @@ for x in range(fuelRod):
 ## Reactor upgrade calculation (basically a copy paste, how do i make this more efficient)
 
 # new size of the reactor
-if upgradeCheck == True:
+if upgradeCheck:
     newSize = int(input("How big do you want the new reactor to be? (input '5' for 5x5x5, etc. select an odd number)\n"))
 
     # control rods and materials needed for upgrade
@@ -178,7 +178,7 @@ if upgradeCheck == True:
         newUranium += 1
 
 # for the upgrade
-if upgradeCheck == True:
+if upgradeCheck:
     graphite = newGraphite - graphite
     uranium = newUranium - uranium
     redstone = newRedstone - redstone
