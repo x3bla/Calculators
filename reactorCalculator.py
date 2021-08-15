@@ -20,12 +20,6 @@ def ConvertToStack(x):
     remainder = x % 64
     return stack, remainder
 
-def ConvertToStack(x):
-    stack = x // 64
-    remainder = x % 64
-    return stack, remainder
-
-
 
 # declaring materials
 reactorCasing = 0
